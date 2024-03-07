@@ -1,0 +1,796 @@
+/*...........................................................
+
+	general variables: colors, shadows, etc
+
+..........................*/
+
+:root {
+    /* vibrant colours that pop!!!! */
+    --red: hsl(352, 57%, 63%);
+    --orange: #E07C5E;
+    --yellow: hsl(49, 84%, 60%);
+    --green: #ABCE60;
+    --aqua: #8DC5D5;
+    --blue: #7D9BD8;
+    --purple: #9188E8;
+    --pink: #f5abb5;
+    /* white to black to grey */
+    --white: hsl(345, 22%, 96%);
+    --white2: hsl(330, 33%, 99%);
+    --grey: hsl(348, 9%, 57%);
+    --black: hsl(348, 8%, 26%);
+    --black2: hsl(0, 0%, 26%);
+    --black2-rgb: 55, 53, 49;
+    --brown: hsl(25, 50%, 30%);
+    /* subtle background colours */
+    --red-bg: #edb5bc;
+    --orange-bg: #f5bca9;
+    --yellow-bg: #fff2b9;
+    --green-bg: #e2f3be;
+    --aqua-bg: #d0e7ee;
+    --blue-bg: #c4d0e8;
+    --purple-bg: #cfcbf0;
+    --pink-bg: #fddfe3;
+    --brown-bg: hsl(25, 42%, 74%);
+    /* shadow colours */
+    --text-shadow-color: 22deg 15% 58%;
+    --shadow-color: 208deg 32% 59%;
+    --sticker-shadow-red: 0deg 40% 40%;
+    --sticker-shadow-orange: 20deg 69% 35%;
+    --sticker-shadow-yellow: 48deg 100% 37%;
+    --sticker-shadow-green: 80deg 69% 35%;
+    --sticker-shadow-aqua: 190deg 69% 35%;
+    --sticker-shadow-blue: 224deg 40% 40%;
+    --sticker-shadow-purple: 240deg 55% 40%;
+    --sticker-shadow-pink: 352deg 32% 50%;
+    --sticker-shadow-brown: 0deg 100% 5%;
+    /* the tooltip */
+    --tooltip: var(--black2);
+    --tooltip-rgb: var(--black2-rgb);
+    /* scrollbar */
+    --scrollbar-track: var(--white-texture);
+    --scrollbar-thumb: var(--blue-texture);
+    --scrollbar-button: url("/Assets/Pixels/Nature/01.gif");
+    /* fonts */
+    --body-font: "Yomogi", sans-serif;
+    --heading-font: "LOVING IS EASY", "Yomogi", sans-serif;
+    /* text selection/highlight */
+    --selection-bg: var(--yellow);
+    --selection-text: var(--black);
+    /* borders */
+    --border-level-1: 0.3vw solid;
+    --border-level-2: 0.2vw solid;
+    --border-level-3: 0.15vw solid;
+    --border-radius-level-1: 0.75vw;
+    --border-radius-level-2: 0.5vw;
+    --border-radius-level-3: 0.25vw;
+    /* spacing */
+    --gap: 1.5rem;
+    --half-gap: calc(var(--gap) / 2);
+    --double-gap: calc(var(--gap) * 2);
+    --full-height: calc(100vh - 2 * var(--gap));
+}
+
+/*...........................................................
+
+		basic styling!!!!!!!!!!!!
+
+..........................*/
+
+body {
+    background-color: var(--blue-bg);
+    background-image: url("/Background/01.png");
+    background-attachment: fixed;
+    background-size: 10vw auto;
+    color: var(--black);
+    font-size: 1.6vw;
+    font-family: var(--body-font);
+}
+
+button {
+    font-family: var(--body-font);
+}
+
+.sanstext {
+    font-family: "Comic Sans MS";
+    font-size: 0.9em;
+    text-transform: lowercase;
+}
+
+p {
+    margin: 1em auto;
+}
+
+p,
+ol,
+ul,
+li,
+blockquote,
+figcaption {
+    max-width: 66ch;
+}
+
+img {
+    object-fit: contain;
+}
+
+ol,
+ul,
+li {
+    text-align: left;
+}
+
+figure {
+    max-width: 55ch;
+    margin: 0 auto;
+}
+
+figure img {
+    max-width: 100%;
+}
+
+figcaption {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+/*...........................................
+
+	EASY PASTE	::before / ::after
+
+..........................*/
+
+.easypaste::before,
+.easypaste::after {
+    --size: 2.5em;
+    content: "";
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.easypaste::before,
+.easypaste::after {
+    background-image: url("EASYPASTE!");
+}
+
+/*...........................................
+
+	EASY PASTE	multiple background, corner background, layered background
+
+..........................*/
+
+.easypaste {
+    --back-position: 0.75em;
+    background-color: var(--white2);
+    background: var(--white-texture);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+    background-position: var(--back-position) var(--back-position), calc(100% - var(--back-position)) var(--back-position), var(--back-position) calc(100% - var(--back-position)), calc(100% - var(--back-position)) calc(100% - var(--back-position)), 0 0;
+    background-size: 2em;
+    background-image: url("EASYPASTE!"), url("EASYPASTE!"), url("EASYPASTE!"), url("EASYPASTE!"), url("/Background/Texture/white.png");
+}
+
+/*..........................
+
+		fonts
+
+..........................*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    --h1-size: 2.2em;
+    font-family: var(--heading-font);
+}
+
+h1 {
+    font-size: var(--h1-size);
+}
+
+h2 {
+    font-size: calc(var(--h1-size) * 0.75);
+}
+
+h3 {
+    font-size: calc(var(--h1-size) * 0.66);
+}
+
+h4 {
+    font-size: calc(var(--h1-size) * 0.58);
+}
+
+/*..........................
+
+	footer
+
+..........................*/
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/*..........................
+
+		links
+
+..........................*/
+
+a {
+    color: var(--blue);
+}
+
+a:hover {
+    color: var(--red);
+    cursor: pointer;
+}
+
+a,
+a:hover {
+    transition: color 0.2s ease;
+}
+
+button,
+details summary,
+dfn {
+    cursor: pointer;
+}
+
+a.hiddenlink {
+    background: inherit;
+    color: inherit;
+    text-decoration: inherit;
+    text-shadow: inherit;
+    font-weight: inherit;
+}
+
+/*..........................
+
+		text decoration
+
+..........................*/
+
+a,
+u {
+    text-decoration-style: dotted;
+}
+
+dfn {
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+/*..........................
+
+		line height
+
+..........................*/
+
+p,
+ol,
+ul,
+blockquote,
+table,
+figcaption {
+    line-height: 1.4;
+}
+
+/*..........................
+
+	text selection / highlight
+
+..........................*/
+
+::-moz-selection {
+    background: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+::selection {
+    background: var(--selection-bg);
+    color: var(--selection-text);
+}
+
+/*..........................
+
+		spoiler text
+
+..........................*/
+
+.spoiler {
+    background-color: var(--black);
+}
+
+.spoiler:hover {
+    color: var(--white2);
+}
+
+/*..........................
+
+		centers the element
+
+..........................*/
+
+.centered {
+    text-align: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-indent: 0;
+}
+
+/*..........................
+
+	flips elements
+
+..........................*/
+
+.flippy {
+    transform: scaleX(-1);
+    /* horizontal */
+}
+
+.flipup {
+    transform: scaleY(-1);
+    /* vertical */
+}
+
+/*..........................
+
+	a nifty divider image!!!
+
+..........................*/
+
+.divider {
+    max-width: 66%;
+    display: block;
+    margin: 1em auto;
+}
+
+/*.................................
+
+	CUTE TOP AND BOTTOM OF PAGE DECORATION!!!!
+
+..........................*/
+
+#seme,
+#uke {
+    width: 100vw;
+    background-repeat: round no-repeat;
+    background-size: auto 100%;
+    position: fixed;
+    left: 0;
+    z-index: 999999999;
+    box-sizing: border-box;
+}
+
+#seme {
+    --seme-height: 6vh;
+    height: var(--seme-height);
+    background-position: top center;
+    top: 0;
+}
+
+#uke {
+    --uke-height: 6vh;
+    height: var(--uke-height);
+    background-position: bottom center;
+    bottom: 0;
+}
+
+/*.................................
+
+	CUTE LEFT AND RIGHT DECORATION!!!!
+
+..........................*/
+
+#hidari,
+#migi {
+    height: 100vh;
+    background-repeat: no-repeat round;
+    background-size: 100% auto;
+    position: fixed;
+    top: 0;
+    z-index: 999999999;
+    box-sizing: border-box;
+}
+
+#hidari {
+    --hidari-width: var(--gap);
+    width: var(--hidari-width);
+    left: 0;
+    background-position: center left;
+}
+
+#migi {
+    --migi-width: var(--gap);
+    width: var(--migi-width);
+    right: 1px;
+    background-position: center right;
+}
+
+/*...........................................................
+
+		fancybox lightbox gallery images YAEAAHHH!!!
+
+..........................*/
+
+.fancybox {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5em;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.fancybox__caption a {
+    text-decoration: none;
+}
+
+.fancybox a img {
+    width: 10em;
+    object-fit: cover;
+    box-shadow: var(--shadow-elevation-low-text);
+}
+
+.fancybox a img:hover,
+.fancybox a img:focus {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-elevation-medium-text);
+}
+
+.fancybox a img,
+.fancybox a img:hover,
+.fancybox a img:focus {
+    transition: transform .3s ease, box-shadow .2s ease;
+}
+
+/*...........................................................
+
+	makes the triangle/arrows on details smaller
+
+..........................*/
+
+details>summary {
+    list-style-type: none;
+}
+
+details>summary::-webkit-details-marker {
+    display: none;
+}
+
+details>summary::before {
+    content: "\025B8";
+    display: inline-block;
+    margin-right: 1ch;
+}
+
+details[open]>summary::before {
+    content: "\025BE";
+}
+
+/*...........................................................
+
+		AT LAST IT'S TIME FOR THE FREAKING SCROLLBARS!!!!!
+
+..........................*/
+
+body::-webkit-scrollbar {
+    width: 1rem;
+    height: 1rem;
+    box-sizing: border-box;
+    outline: var(--border-level-3);
+    outline-style: dotted;
+}
+
+body::-webkit-scrollbar-button:single-button {
+    height: 1rem;
+    background-image: var(--scrollbar-button);
+    background-repeat: no-repeat no-repeat !important;
+    background-position: center;
+    background-size: 75%;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+body::-webkit-scrollbar-thumb {
+    box-sizing: border-box;
+    background: var(--scrollbar-thumb);
+    /* border-radius: var(--border-radius-level-3); */
+    /* border: var(--border-level-3); 
+		border-left: 0;
+		border-right: 0; */
+}
+
+/*..........................
+
+	creates a scrolling box!!!
+
+..........................*/
+
+.hugme {
+    overflow: auto;
+    padding-right: 1ch;
+}
+
+
+.hugme::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.hugme::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    border: var(--border-level-3);
+    background: var(--red-texture);
+    border-color: var(--red);
+}
+
+/*...........................................................
+
+		BACKGROUND COLOURS!! with nested divs as well
+
+..........................*/
+
+:root {
+    --red-texture: var(--red) url("/Background/Texture/red.png");
+    --orange-texture: var(--orange) url("/Background/Texture/orange.png");
+    --yellow-texture: var(--yellow) url("/Background/Texture/yellow.png");
+    --green-texture: var(--green) url("/Background/Texture/green.png");
+    --aqua-texture: var(--aqua) url("/Background/Texture/aqua.png");
+    --blue-texture: var(--blue) url("/Background/Texture/blue.png");
+    --purple-texture: var(--purple) url("/Background/Texture/purple.png");
+    --pink-texture: var(--pink) url("/Background/Texture/pink.png");
+    --white-texture: var(--white) url("/Background/Texture/white.png");
+    --black-texture: var(--black) url("/Background/Texture/black.gif");
+    --brown-texture: var(--brown) url("/Background/Texture/brown.png");
+}
+
+/*..........................
+
+	where the actual writing goes!
+
+..........................*/
+
+.texture>* {
+    background: var(--white-texture);
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em 2em;
+    border: var(--border-level-2);
+    border-style: inset;
+    border-radius: var(--border-radius-level-2);
+    box-shadow: 0.13em 0.11em 0.36em hsla(22, 32%, 85%, 0.9) inset;
+}
+
+/*..........................
+
+	outer nesting layer
+
+..........................*/
+
+.texture {
+    padding: 1em;
+    box-sizing: border-box;
+    border: var(--border-level-1);
+    border-radius: var(--border-radius-level-1);
+    border-style: outset;
+}
+
+.untexture {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+}
+
+/* red */
+
+.red.texture {
+    background: var(--red-texture);
+    border-color: var(--red);
+}
+
+.red.texture>* {
+    border-color: var(--red) !important;
+}
+
+/* orange */
+
+.orange.texture {
+    background: var(--orange-texture);
+    border-color: var(--orange);
+}
+
+.orange.texture>* {
+    border-color: var(--orange) !important;
+}
+
+/* yellow */
+
+.yellow.texture {
+    background: var(--yellow-texture);
+    border-color: var(--yellow);
+}
+
+.yellow.texture>* {
+    border-color: var(--yellow) !important;
+}
+
+/* green */
+
+.green.texture {
+    background: var(--green-texture);
+    border-color: var(--green);
+}
+
+.green.texture>* {
+    border-color: var(--green) !important;
+}
+
+/* aqua */
+
+.aqua.texture {
+    background: var(--aqua-texture);
+    border-color: var(--aqua);
+}
+
+.aqua.texture>* {
+    border-color: var(--aqua) !important;
+}
+
+/* blue */
+
+.blue.texture {
+    background: var(--blue-texture);
+    border-color: var(--blue);
+}
+
+.blue.texture>* {
+    border-color: var(--blue) !important;
+}
+
+/* purple */
+
+.purple.texture {
+    background: var(--purple-texture);
+    border-color: var(--purple);
+}
+
+.purple.texture>* {
+    border-color: var(--purple) !important;
+}
+
+/* pink */
+
+.pink.texture {
+    background: var(--pink-texture);
+    border-color: var(--pink);
+}
+
+.pink.texture>* {
+    border-color: var(--pink) !important;
+}
+
+/* brown */
+
+.brown.texture {
+    background: var(--brown-texture);
+    border-color: var(--brown);
+}
+
+.brown.texture>* {
+    border-color: var(--brown) !important;
+}
+
+/* black --- NOTE: this is usually where I'm writing (chalkboard style) */
+
+.black.texture {
+    background: var(--black-texture);
+    color: var(--white2);
+    border-style: inset;
+    border-color: var(--black);
+    box-shadow: 0.1em 0.08em 0.25em 0.05em hsla(0, 3%, 6%, 0.45) inset;
+}
+
+/*...........................................................
+
+		text outlines
+
+..........................*/
+
+:root {
+    --text-shadow-white: 0.033em 0.033em var(--white2), -0.033em 0.033em var(--white2), -0.033em -0.033em var(--white2), 0.033em -0.033em var(--white2), 0.04em 0.04em var(--white2), -0.04em 0.04em var(--white2), -0.04em -0.04em var(--white2), 0.04em -0.04em var(--white2);
+    --text-shadow-black: 0.033em 0.033em var(--black), -0.033em 0.033em var(--black), -0.033em -0.033em var(--black), 0.033em -0.033em var(--black), 0.04em 0.04em var(--black), -0.04em 0.04em var(--black), -0.04em -0.04em var(--black), 0.04em -0.04em var(--black);
+    --text-shadow-custom: 0.033em 0.033em var(--outline-color), -0.033em 0.033em var(--outline-color), -0.033em -0.033em var(--outline-color), 0.033em -0.033em var(--outline-color), 0.04em 0.04em var(--outline-color), -0.04em 0.04em var(--outline-color), -0.04em -0.04em var(--outline-color), 0.04em -0.04em var(--outline-color);
+}
+
+/*...........................................................
+
+	SHADOWS!!!!! FINALLY SOME GOOD FUCKING SHADOWS
+
+..........................*/
+
+:root {
+    /* use with ****box-shadow**** property */
+    --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34), 0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34), 1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+    --shadow-elevation-medium: 0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.39), 0.7px 1.3px 1.5px -1.1px hsl(var(--shadow-color) / 0.35), 1.8px 3.6px 4px -2.2px hsl(var(--shadow-color) / 0.3), 4.6px 9.2px 10.3px -3.3px hsl(var(--shadow-color) / 0.25);
+    --shadow-elevation-high: 0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.46), 0.7px 1.4px 1.4px -0.6px hsl(var(--shadow-color) / 0.42), 1.4px 2.8px 2.8px -1.1px hsl(var(--shadow-color) / 0.37), 2.7px 5.4px 5.4px -1.7px hsl(var(--shadow-color) / 0.33), 5px 10px 10.1px -2.3px hsl(var(--shadow-color) / 0.29), 8.6px 17.3px 17.4px -2.9px hsl(var(--shadow-color) / 0.24), 14px 28px 28.2px -3.4px hsl(var(--shadow-color) / 0.2);
+    --life-saving-box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.07), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.05), 12.5px 12.5px 10px rgba(0, 0, 0, 0.042), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.035), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.028), 100px 100px 80px rgba(0, 0, 0, 0.02);
+    --life-saving-box-shadow-low: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.07), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.05), 10.2px 10.2px 8px rgba(0, 0, 0, 0.04);
+    /* for coloured backgrounds */
+    --sticker-elevation-medium: 0.3px 0.5px 0.6px hsl(var(--sticker-shadow-color) / 0.39), 0.7px 1.3px 1.5px -1.1px hsl(var(--sticker-shadow-color) / 0.35), 1.8px 3.6px 4px -2.2px hsl(var(--sticker-shadow-color) / 0.3), 4.6px 9.2px 10.3px -3.3px hsl(var(--sticker-shadow-color) / 0.25);
+    --sticker-elevation-high: 0.3px 0.5px 0.5px hsl(var(--sticker-shadow-color) / 0.46), 0.7px 1.4px 1.4px -0.6px hsl(var(--sticker-shadow-color) / 0.42), 1.4px 2.8px 2.8px -1.1px hsl(var(--sticker-shadow-color) / 0.37), 2.7px 5.4px 5.4px -1.7px hsl(var(--sticker-shadow-color) / 0.33), 5px 10px 10.1px -2.3px hsl(var(--sticker-shadow-color) / 0.29), 8.6px 17.3px 17.4px -2.9px hsl(var(--sticker-shadow-color) / 0.24), 14px 28px 28.2px -3.4px hsl(var(--sticker-shadow-color) / 0.2);
+    /* for BOXES that sit on white backgrounds */
+    --shadow-elevation-low-text: 0.3px 0.5px 0.7px hsl(var(--text-shadow-color) / 0.34), 0.4px 0.8px 1px -1.2px hsl(var(--text-shadow-color) / 0.34), 1px 2px 2.5px -2.5px hsl(var(--text-shadow-color) / 0.34);
+    --shadow-elevation-medium-text: 0.3px 0.5px 0.6px hsl(var(--text-shadow-color) / 0.39), 0.7px 1.3px 1.5px -1.1px hsl(var(--text-shadow-color) / 0.35), 1.8px 3.6px 4px -2.2px hsl(var(--text-shadow-color) / 0.3), 4.6px 9.2px 10.3px -3.3px hsl(var(--text-shadow-color) / 0.25);
+    /* use with ****filter**** property -- FOR NON-BOXES!! */
+    --drop-shadow-low: drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.21)) drop-shadow(0.4px 0.8px 1px hsl(var(--shadow-color) / 0.21)) drop-shadow(1px 2px 2.5px hsl(var(--shadow-color) / 0.21));
+    --drop-shadow-medium: drop-shadow(0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.25)) drop-shadow(0.8px 1.6px 2px hsl(var(--shadow-color) / 0.25)) drop-shadow(2.1px 4.1px 5.2px hsl(var(--shadow-color) / 0.25)) drop-shadow(5px 10px 12.6px hsl(var(--shadow-color) / 0.25));
+    /* for coloured backgrounds */
+    --sticker-drop-shadow: drop-shadow(0.3px 0.5px 0.7px hsl(var(--sticker-shadow-color) / 0.25)) drop-shadow(0.8px 1.6px 2px hsl(var(--sticker-shadow-color) / 0.25)) drop-shadow(2.1px 4.1px 5.2px hsl(var(--sticker-shadow-color) / 0.25)) drop-shadow(5px 10px 12.6px hsl(var(--sticker-shadow-color) / 0.25));
+    /*
+	--life-saving-drop-shadow:
+		drop-shadow(2.8px 2.8px 2.2px rgba(0, 0, 0, 0.07)),
+		drop-shadow(6.7px 6.7px 5.3px rgba(0, 0, 0, 0.05)),
+		drop-shadow(12.5px 12.5px 10px rgba(0, 0, 0, 0.042)),
+		drop-shadow(22.3px 22.3px 17.9px rgba(0, 0, 0, 0.035)),
+		drop-shadow(41.8px 41.8px 33.4px rgba(0, 0, 0, 0.028)),
+		drop-shadow(100px 100px 80px rgba(0, 0, 0, 0.02));
+	*/
+    --life-saving-drop-shadow: drop-shadow(2.8px 2.8px 2.2px rgba(0, 0, 0, 0.07)) drop-shadow(6.7px 6.7px 5.3px rgba(0, 0, 0, 0.05)) drop-shadow(10px 10px 8.3px rgba(0, 0, 0, 0.03));
+    --text-drop-shadow: drop-shadow(0.3px 0.5px 0.7px hsl(var(--text-shadow-color) / 0.25)) drop-shadow(0.8px 1.6px 2px hsl(var(--text-shadow-color) / 0.25)) drop-shadow(1.7px 2.2px 3px hsl(var(--text-shadow-color) / 0.15));
+    /*  text shadows */
+    /* for white backgrounds */
+    --drop-text-shadow: drop-shadow(0.3px 0.5px 0.7px hsl(var(--text-shadow-color) / 0.21)) drop-shadow(0.4px 0.8px 1px hsl(var(--text-shadow-color) / 0.21));
+    /* for coloured backgrounds */
+    --simple-text-shadow: drop-shadow(0.01em 0.02em 0.02em rgb(0 0 0 / 0.1)) drop-shadow(0.01em 0.02em 0.02em rgb(0 0 0 / 0.08));
+    /* this one is literally a text shadow for the text-shadow property */
+    --literal-text-shadow: 0.3px 0.5px 0.7px hsl(var(--text-shadow-color) / 0.21), 0.4px 0.8px 1px hsl(var(--text-shadow-color) / 0.21);
+}
+
+/*...........................................................
+
+	style my freaking tooltip
+
+..........................*/
+
+#s-m-t-tooltip {
+    /* basic */
+    max-width: 33ch;
+    z-index: 99999;
+    margin: 24px 14px 7px 12px;
+    /* style and design */
+    padding: 1ch;
+    background: var(--tooltip);
+    /* fallback if rgba not supported */
+    background: rgba(var(--tooltip-rgb), 0.8);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15), -1px -1px 0 rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15), -1px -1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15), -1px -1px 0 rgba(255, 255, 255, 0.3);
+    /* font */
+    font-family: var(--body-font);
+    font-size: 0.75em;
+    line-height: 1em;
+    color: var(--white2);
+    text-align: center;
+}

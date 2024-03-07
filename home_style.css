@@ -1,0 +1,198 @@
+@font-face {
+    font-family: ktegaki;
+    src: url(https://dl.dropbox.com/s/0v89ncr2notdcgc/KTEGAKI.ttf);
+}
+
+
+
+
+::-moz-selection {
+    /* Code for Firefox */
+    background: #e4c4c1;
+}
+
+::selection {
+    background: #e4c4c1;
+}
+
+body {
+    background-color: #fee9e6;
+    background-image: url("https://ilysm.neocities.org/backgrounds/bg.png");
+    color: #333333;
+    font-family: ktegaki;
+    font-size: 23px;
+}
+
+html {
+    cursor: url(https://ilysm.neocities.org/cursors/potato_bunny.png), auto;
+}
+
+
+/* link */
+
+a {
+    color: #a6535d;
+}
+
+.container {
+    border: 0px solid black;
+    background-image: url(https://ilysm.neocities.org/backgrounds/open_journal.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 0 auto;
+    width: 1200px;
+    height: 700px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main {
+    height: 77%;
+    width: 66%;
+    border: 0px solid #67584c;
+    position: absolute;
+    padding: 6px;
+    overflow: fixed;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.heart {
+    max-width: 150px;
+    height: auto;
+    -webkit-animation-duration: .2s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.heart:hover {
+    animation: bounce .5s infinite;
+    /* other browsers */
+    -webkit-animation: bounce .5s infinite;
+    /* webkit browsers */
+    -moz-animation: bounce .5s infinite;
+    /* firefox */
+    -o-animation: bounce .5s infinite;
+    /* opera */
+}
+
+.agent {
+    position: absolute;
+    left: 650px;
+    top: 310px;
+    width: 200px;
+    -webkit-animation-duration: .2s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.agent:hover {
+    animation: bounce .5s infinite;
+    /* other browsers */
+    -webkit-animation: bounce .5s infinite;
+    /* webkit browsers */
+    -moz-animation: bounce .5s infinite;
+    /* firefox */
+    -o-animation: bounce .5s infinite;
+    /* opera */
+}
+
+.bubble {
+    background-color: #fcf3f2;
+    color: #333333;
+    font-family: ktegaki;
+    font-size: 23px;
+    position: absolute;
+    left: 450px;
+    top: 40px;
+    width: 300px;
+    height: 180px;
+    border-color: #ecc5c3;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 55px;
+    padding: 22px;
+    overflow: auto;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+.bubble::-webkit-scrollbar {
+    display: none;
+}
+
+#back {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: -160px;
+    top: -80px;
+    transition: transform .2s;
+    /* Animation */
+}
+
+#back:hover {
+    transform: scale(1.2);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+    }
+}
+
+@-moz-keyframes bounce {
+    0%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+    50% {
+        -moz-transform: translateY(-30px);
+    }
+}
+
+@-o-keyframes bounce {
+    0%,
+    100% {
+        -o-transform: translateY(0);
+    }
+    50% {
+        -o-transform: translateY(-30px);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}

@@ -1,0 +1,364 @@
+<html>
+
+<head>
+  <link rel="icon" type="image/png" href="https://files.catbox.moe/066ezy.png">
+  <title>Ada's cafeee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <style>
+        @font-face {
+            font-family: 'ktegaki';
+            src: url(https://dl.dropbox.com/s/0v89ncr2notdcgc/KTEGAKI.ttf);
+        }
+
+        .style-0 {
+            cursor: auto;
+            background-color: rgb(155, 197, 206);
+            background-image: url("https://ilysm.neocities.org/backgrounds/bg.png");
+            font-family: ktegaki;
+            line-height: 24px;
+            color: rgb(0, 0, 0);
+            margin: 0px;
+            padding: 0px;
+            animation: 1s ease 0s infinite normal none running bugfix;
+        }
+      /* Increase font size for all text elements */
+      .style-8,
+      .style-10,
+      .style-12,
+      .style-14,
+      .style-16,
+      .style-18,
+      .style-20,
+      .style-22,
+      .style-32,
+      p,
+      a {
+          font-size: 28px; /* Adjust the size as needed */
+      }
+        .style-1 {
+            display: none;
+        }
+
+        .style-2 {
+            display: none;
+        }
+
+        .style-3 {
+            position: fixed;
+            right: 16px;
+            top: 16px;
+            padding: 26px 11px;
+            z-index: 5;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .style-4 {
+            height: 4px;
+            width: 35px;
+            border-radius: 2px;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            display: block;
+            transition: all 0.2s ease-in-out 0s;
+        }
+
+        .style-5 {
+            height: 945px;
+            width: 100vw;
+            background: rgb(68, 68, 68) none repeat scroll 0% 0% / auto padding-box border-box;
+            z-index: 2;
+            visibility: hidden;
+            position: fixed;
+        }
+
+        .style-6 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            height: 945px;
+            padding-left: 0px;
+            list-style-type: none;
+        }
+
+        .style-7 {
+            padding: 16px;
+        }
+
+        .style-8 {
+            color: rgb(255, 255, 255);
+            text-decoration: none solid rgb(255, 255, 255);
+            font-size: 24px;
+            transition: all 0.2s ease 0s;
+            display: inline-block;
+        }
+
+        .style-9 {
+            padding: 16px;
+        }
+
+        .style-10 {
+            color: rgb(255, 255, 255);
+            text-decoration: none solid rgb(255, 255, 255);
+            font-size: 24px;
+            transition: all 0.2s ease 0s;
+            display: inline-block;
+        }
+
+        .style-11 {
+            padding: 16px;
+        }
+
+        .style-12 {
+            color: rgb(255, 255, 255);
+            text-decoration: none solid rgb(255, 255, 255);
+            font-size: 24px;
+            transition: all 0.2s ease 0s;
+            display: inline-block;
+        }
+
+        .style-13 {
+            padding: 16px;
+        }
+
+        .style-14 {
+            color: rgb(255, 255, 255);
+            text-decoration: none solid rgb(255, 255, 255);
+            font-size: 24px;
+            transition: all 0.2s ease 0s;
+            display: inline-block;
+        }
+
+        .style-15 {
+            padding: 16px;
+        }
+
+        .style-16 {
+            color: rgb(255, 255, 255);
+            text-decoration: none solid rgb(255, 255, 255);
+            font-size: 24px;
+            transition: all 0.2s ease 0s;
+            display: inline-block;
+        }
+
+        .style-17 {
+            padding: 16px;
+        }
+
+        .style-18 {
+            color: rgb(255, 255, 255);
+            text-decoration: none solid rgb(255, 255, 255);
+            font-size: 24px;
+            transition: all 0.2s ease 0s;
+            display: inline-block;
+        }
+
+        .style-19 {
+            padding: 16px;
+        }
+
+        .style-20 {
+            color: rgb(255, 255, 255);
+            text-decoration: none solid rgb(255, 255, 255);
+            font-size: 24px;
+            transition: all 0.2s ease 0s;
+            display: inline-block;
+        }
+
+        .style-21 {
+            padding: 16px;
+        }
+
+        .style-22 {
+            color: rgb(255, 255, 255);
+            text-decoration: none solid rgb(255, 255, 255);
+            font-size: 24px;
+            transition: all 0.2s ease 0s;
+            display: inline-block;
+        }
+
+        .style-23 {
+            max-width: 1028px;
+            padding-top: 80px;
+            margin: 0px auto;
+        }
+
+        .style-24 {
+            text-align: center;
+        }
+
+        .style-25 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .style-26 {
+            width: 230px;
+            padding: 0px;
+        }
+
+        .style-27 {
+          background: url(https://i.ibb.co/nj7YhYy/cafe-trim.png) no-repeat 0% 70%;
+          background-size: contain;
+          height: 200px;
+          width: 216px;
+          display: table-cell;
+          vertical-align: bottom;
+        }
+
+        .style-28 {
+          width: 64px;
+          height: 64px;
+          background-image: url(https://i.ibb.co/Ttjk49V/adasheet.png);
+          background-size: cover;
+          animation: logo 900ms steps(7) infinite;
+          animation-direction: normal;
+        }
+      @keyframes logo {
+          0% {
+              background-position: 0% 0%;
+          }
+          100% {
+              background-position: 100% 0%;
+          }
+      }
+        .style-29 {}
+
+        .style-30 {}
+
+        .style-31 {
+            flex: 1 1 0%;
+            padding: 20px;
+        }
+
+        .style-32 {
+            font-family: 'Pixel Head', monospace;
+            color: rgb(69, 40, 60);
+            line-height: 32px;
+        }
+
+        .style-33 {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .style-34 {
+            flex: 1 1 0%;
+        }
+
+        .style-35 {
+            color: rgb(51, 51, 51);
+            transition: all 0.2s ease 0s;
+            display: inline-block;
+            margin: 0px 20px;
+        }
+
+        .style-36 {
+            max-width: 100%;
+        }
+
+        .style-37 {
+            width: 312px;
+            padding-right: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .style-38 {
+            color: rgb(51, 51, 51);
+            transition: all 0.2s ease 0s;
+            display: inline-block;
+        }
+
+        .style-39 {
+            max-width: 100%;
+        }
+
+        .style-40 {
+            max-width: 100%;
+            filter: drop-shadow(rgb(155, 197, 206) 0px 4px 0px);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .style-41 {
+            color: rgb(51, 51, 51);
+            transition: all 0.2s ease 0s;
+            display: none;
+            margin-bottom: 30px;
+        }
+
+        .style-42 {
+            max-width: 100%;
+        }
+    </style>
+</head>
+  <a onClick="togglePlay()">&nbsp;&nbsp;&nbsp;&nbsp;<span id="playPause">Play</span></a>
+  <audio id="myAudio" src="cafe.mp3" preload="auto"></audio>
+
+  <script type="text/javascript">
+      var myAudio = document.getElementById("myAudio");
+      var playPauseButton = document.getElementById("playPause");
+
+      function togglePlay() {
+          if (myAudio.paused) {
+              myAudio.play();
+              playPauseButton.innerText = "Pause";
+          } else {
+              myAudio.pause();
+              playPauseButton.innerText = "Play";
+          }
+      };
+  </script>
+<body class="style-0">
+    <div class="style-1"><input type="checkbox" class="style-2" /> <label for="overlay-input" class="style-3"><span class="style-4"></span></label>
+        <div class="style-5">
+            <ul class="style-6">
+                <li class="style-7"><a href="/index.html" class="style-8">Splash</a></li>
+                <li class="style-9"><a href="/main.html" class="style-10">Cafe</a></li>
+                <li class="style-11"><a href="/magazine.html" class="style-12">Zine rack</a></li>
+                <li class="style-13"><a href="/explore.html" class="style-14">Explore</a></li>
+                <li class="style-15"><a href="/people.html" class="style-16">People</a></li>
+                <li class="style-17"><a href="/giftshop.html" class="style-18">Giftshop</a></li>
+                <li class="style-19"><a href="/about.html" class="style-20">About</a></li>
+                <li class="style-21"><a href="/guestbook.html" class="style-22">Guestbook</a></li>
+                <!----><a href="blog/">Blog</a>
+                <li><a href="contact.html">Contact</a></li>
+                -->
+            </ul>
+        </div>
+    </div>
+    <div class="style-23">
+        <header class="style-24">
+        </header>
+        <div class="style-25">
+            <div class="style-26">
+                <marquee class="style-27">
+                    <div class="style-28"></div>
+                </marquee>
+                <div class="style-29">
+                    <nav class="style-30">
+
+                    </nav>
+                </div>
+            </div>
+            <div class="style-31">
+                <div class=""></div>
+                <h1 class="style-32">Ada's Cafe</h1>
+                <div class="style-33">
+                    <div class="style-34">
+                        <p class="">Hiii hun<img src="https://ilysm.neocities.org/favicons/cindance.gif"><img src="https://ilysm.neocities.org/favicons/luvmsg.gif">, welcome to Ada's Café. come come feel free to sit wherever (on the floor... still under construction) and have a cup of coffee and listenn<img src="https://ilysm.neocities.org/favicons/neskaya.net_cinnamoroll5.gif"></p>
+                        <p class="">this is your cafe, hopefully we'll make a real one in the future, i thought about that as a cute dream cuz why not? it sounds cozy and pretty ooou and a bakery with it? sounds even prettier<img src="https://ilysm.neocities.org/favicons/heart.gif"><img src="https://ilysm.neocities.org/favicons/heart.gif"><img src="https://ilysm.neocities.org/favicons/heart.gif"></p> <a href="home.html" class="style-35"><img src="https://aegi.neocities.org/images/experiments/zine-rack.png" class="style-36" /></a>
+                    </div>
+                    <div class="style-37"><a href="menu.html" class="style-38"><img src="https://aegi.neocities.org/images/experiments/cafe-board-menu.png" alt="cafe menu board" class="style-39" /></a> <br class="" /> <img src="https://aegi.neocities.org/images/experiments/cafe-interior.png" class="style-40" alt="cafe counter" /> <a href="home.html" class="style-41"><img src="https://aegi.neocities.org/images/experiments/zine-rack.png" class="style-42" /></a></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

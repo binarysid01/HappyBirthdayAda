@@ -1,0 +1,482 @@
+@font-face {
+    font-family: ktegaki;
+    src: url(https://dl.dropbox.com/s/0v89ncr2notdcgc/KTEGAKI.ttf);
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    background: #e4c4c1;
+}
+
+::selection {
+    background: #e4c4c1;
+}
+
+body {
+    background-color: #fee9e6;
+    background-image: url("https://ilysm.neocities.org/backgrounds/bg.png");
+    color: #333333;
+    font-family: ktegaki;
+    font-size: 23px;
+}
+
+html {
+    cursor: url(https://ilysm.neocities.org/cursors/potato_bunny.png), auto;
+}
+
+
+/* link */
+
+a {
+    color: #a6535d;
+}
+
+.container {
+    border: 0px solid black;
+    background-image: url(https://ilysm.neocities.org/backgrounds/page.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 0 auto;
+    width: 600px;
+    height: 800px;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+}
+
+.main {
+    height: 73%;
+    width: 77%;
+    border: 0px solid #67584c;
+    position: absolute;
+    padding: 6px;
+    overflow: auto;
+    left: 51%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.heart {
+    max-width: 100px;
+    height: auto;
+    -webkit-animation-duration: .2s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.heart:hover {
+    animation: bounce .5s infinite;
+    /* other browsers */
+    -webkit-animation: bounce .5s infinite;
+    /* webkit browsers */
+    -moz-animation: bounce .5s infinite;
+    /* firefox */
+    -o-animation: bounce .5s infinite;
+    /* opera */
+}
+
+#back {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: -130px;
+    top: 100px;
+    transition: transform .2s;
+    /* Animation */
+}
+
+#back:hover {
+    transform: scale(1.2);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.current {
+    width: 454px;
+    height: 328px;
+    background-color: #fee9e6;
+    background-image: url(https://ilysm.neocities.org/backgrounds/diaryentry.png);
+    background-size: cover;
+    text-align: center;
+}
+
+.currententry {
+    /* 415px / 180px */
+    width: 380px;
+    overflow: hidden;
+    text-align: justify;
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 3px;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+.currententry::-webkit-scrollbar {
+    display: none;
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+    }
+}
+
+@-moz-keyframes bounce {
+    0%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+    50% {
+        -moz-transform: translateY(-30px);
+    }
+}
+
+@-o-keyframes bounce {
+    0%,
+    100% {
+        -o-transform: translateY(0);
+    }
+    50% {
+        -o-transform: translateY(-30px);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.commentbox {
+    width: 580px;
+    overflow: scroll;
+}
+
+#HCB_comment_box {
+    width: 90%;
+    height: 1000px !important;
+    margin: auto;
+    text-align: left !important;
+    color: #333 !important;
+    font-family: "ktegaki" !important;
+}
+
+.btn,
+input#hcb_submit,
+.hcb-comment-tb button {
+    font-family: "ktegaki" !important;
+    background: url(backgrounds/bg.png) repeat fixed center !important;
+    background-size: contain !important;
+    border: 1px solid #c6ac9b !important;
+    text-align: center;
+    color: #333 !important;
+    font-size: 0.9em !important;
+}
+
+#HCB_comment_box #hcb_form_content,
+#HCB_comment_box #hcb_form_email,
+#HCB_comment_box #hcb_form_name,
+#HCB_comment_box #hcb_form_website {
+    font-family: "ktegaki" !important;
+    color: #c49793 !important;
+    /* #e4c4c1 */
+    font-size: 23px !important;
+    background-color: #fefcf5;
+    /* white cream */
+}
+
+#HCB-comment_box #hcb_form_content::placeholder,
+#HCB_comment_box #hcb_form_email::placeholder,
+#HCB_comment_box #hcb_form_name::placeholder,
+#HCB_comment_box #hcb_form_website::placeholder {
+    color: #333 !important;
+}
+
+#HCB_comment_box .author-name,
+#HCB_comment_box .hcb-comment-body,
+#HCB_comment_box .hcb-comment-tb a {
+    font-size: 22px !important;
+    /* Adjust the value depending on wanted text size */
+}
+
+
+/* wwww.htmlcommentbox.com Hyperlink Color */
+
+.hcb-comment-tb> a,
+.home-desc> a {
+    color: #c49793 !important;
+}
+
+
+/* Hide Comments Title */
+
+#HCB_comment_box h3 {
+    display: none !important;
+}
+
+
+
+
+@font-face {
+    font-family: ktegaki;
+    src: url(https://dl.dropbox.com/s/0v89ncr2notdcgc/KTEGAKI.ttf);
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    background: #e4c4c1;
+}
+
+::selection {
+    background: #e4c4c1;
+}
+
+body {
+    background-color: #fee9e6;
+    background-image: url("https://ilysm.neocities.org/backgrounds/bg.png");
+    color: #333333;
+    font-family: ktegaki;
+    font-size: 23px;
+}
+
+html {
+    cursor: url(https://ilysm.neocities.org/cursors/potato_bunny.png), auto;
+}
+
+
+/* link */
+
+a {
+    color: #a6535d;
+}
+
+.container {
+    border: 0px solid black;
+    background-image: url(https://ilysm.neocities.org/backgrounds/page.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 0 auto;
+    width: 600px;
+    height: 800px;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+}
+
+.main {
+    height: 73%;
+    width: 77%;
+    border: 0px solid #67584c;
+    position: absolute;
+    padding: 6px;
+    overflow: auto;
+    left: 51%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+}
+
+.heart {
+    max-width: 100px;
+    height: auto;
+    -webkit-animation-duration: .2s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.heart:hover {
+    animation: bounce .5s infinite;
+    /* other browsers */
+    -webkit-animation: bounce .5s infinite;
+    /* webkit browsers */
+    -moz-animation: bounce .5s infinite;
+    /* firefox */
+    -o-animation: bounce .5s infinite;
+    /* opera */
+}
+
+#back {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: -130px;
+    top: 100px;
+    transition: transform .2s;
+    /* Animation */
+}
+
+#back:hover {
+    transform: scale(1.2);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.current {
+    width: 454px;
+    height: 328px;
+    background-color: #fee9e6;
+    background-image: url(https://ilysm.neocities.org/backgrounds/diaryentry.png);
+    background-size: cover;
+    text-align: center;
+}
+
+.currententry {
+    /* 415px / 180px */
+    width: 380px;
+    overflow: hidden;
+    text-align: justify;
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 3px;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+.currententry::-webkit-scrollbar {
+    display: none;
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+    }
+}
+
+@-moz-keyframes bounce {
+    0%,
+    100% {
+        -moz-transform: translateY(0);
+    }
+    50% {
+        -moz-transform: translateY(-30px);
+    }
+}
+
+@-o-keyframes bounce {
+    0%,
+    100% {
+        -o-transform: translateY(0);
+    }
+    50% {
+        -o-transform: translateY(-30px);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.commentbox {
+    width: 580px;
+    overflow: scroll;
+}
+
+#HCB_comment_box {
+    width: 90%;
+    height: 1000px !important;
+    margin: auto;
+    text-align: left !important;
+    color: #333 !important;
+    font-family: "ktegaki" !important;
+}
+
+.btn,
+input#hcb_submit,
+.hcb-comment-tb button {
+    font-family: "ktegaki" !important;
+    background: url(https://ilysm.neocities.org/backgrounds/bg.png) repeat fixed center !important;
+    background-size: contain !important;
+    border: 1px solid #c6ac9b !important;
+    text-align: center;
+    color: #333 !important;
+    font-size: 0.9em !important;
+}
+
+#HCB_comment_box #hcb_form_content,
+#HCB_comment_box #hcb_form_email,
+#HCB_comment_box #hcb_form_name,
+#HCB_comment_box #hcb_form_website {
+    font-family: "ktegaki" !important;
+    color: #c49793 !important;
+    /* #e4c4c1 */
+    font-size: 23px !important;
+    background-color: #fefcf5;
+    /* white cream */
+}
+
+#HCB-comment_box #hcb_form_content::placeholder,
+#HCB_comment_box #hcb_form_email::placeholder,
+#HCB_comment_box #hcb_form_name::placeholder,
+#HCB_comment_box #hcb_form_website::placeholder {
+    color: #333 !important;
+}
+
+#HCB_comment_box .author-name,
+#HCB_comment_box .hcb-comment-body,
+#HCB_comment_box .hcb-comment-tb a {
+    font-size: 22px !important;
+    /* Adjust the value depending on wanted text size */
+}
+
+
+/* wwww.htmlcommentbox.com Hyperlink Color */
+
+.hcb-comment-tb> a,
+.home-desc> a {
+    color: #c49793 !important;
+}
+
+
+/* Hide Comments Title */
+
+#HCB_comment_box h3 {
+    display: none !important;
+}

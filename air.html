@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://files.catbox.moe/066ezy.png">
+
+  <meta charset="UTF-8">
+  <title>message for ada</title>
+  <link rel="stylesheet" href="air.css">
+
+</head>
+
+    <a onClick="togglePlay()"><span id="playPause">Play</span></a>
+    <audio id="myAudio" src="air.mp3" preload="auto"></audio>
+
+    <script type="text/javascript">
+      var myAudio = document.getElementById("myAudio");
+      var playPauseButton = document.getElementById("playPause");
+
+      function togglePlay() {
+        if (myAudio.paused) {
+          myAudio.play();
+          playPauseButton.innerText = "Pause";
+        } else {
+          myAudio.pause();
+          playPauseButton.innerText = "Play";
+        }
+      };
+    </script>
+  
+<body>
+<!-- partial:index.partial.html -->
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+</style>
+
+<body>
+  
+  <div class="wrapper pointer-events-none"></div>
+  <div class="flex_wrapper pointer-events-none"></div>
+  <div class="input_wrapper">
+    
+  </div>
+
+</body>
+<!-- partial -->
+  <script  src="air.js"></script>
+
+</body>
+</html>

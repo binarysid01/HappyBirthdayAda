@@ -1,0 +1,917 @@
+/*...........................................................
+
+		basic style
+
+..........................*/
+
+body {
+    background-color: var(--blue-bg);
+    background-image: url("/Background/gg02.png"), url("/Background/01.png");
+    background-attachment: fixed;
+    background-size: 10vw auto, 10vw auto;
+    background-repeat: round, repeat;
+    background-position: center, 0 0;
+    display: grid;
+    grid-template-areas: 'header' 'main' 'footer';
+    gap: var(--gap);
+    grid-auto-flow: row;
+    grid-auto-columns: minmax(0, 1fr);
+    margin: var(--gap) auto;
+    text-align: center;
+    width: 80vw;
+}
+
+/*..........................
+
+		links
+
+..........................*/
+
+a {
+    color: var(--red);
+}
+
+.highlight[title],
+.highlight[title]:hover {
+    transition: color 0.2s ease;
+}
+
+/*..........................
+
+		shadows
+
+..........................*/
+
+header>div,
+.sidebar h2,
+.sidebar>img {
+    filter: var(--drop-shadow-low);
+}
+
+main>section,
+.sidebar>section,
+footer {
+    box-shadow: var(--shadow-elevation-medium);
+}
+
+main>section>div>*,
+footer>div>* {
+    filter: var(--drop-text-shadow);
+}
+
+nav a>*,
+.sidebar>section>* {
+    filter: var(--simple-text-shadow);
+}
+
+nav a {
+    box-shadow: 2.8px 2.8px 1.5px -0.2px rgba(0, 0, 0, 0.03), 3px 2px 1.55px -0.5px rgba(0, 0, 0, 0.05);
+}
+
+/*..........................
+
+		::before / ::after
+
+..........................*/
+
+h1::before,
+h1::after,
+main>section h2::before,
+main>section h2::after {
+    --size: 7em;
+    content: "";
+    display: inline-block;
+    width: var(--size);
+    height: calc(var(--size) / 2);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*..........................
+
+		borders, nesting
+
+..........................*/
+
+header>div,
+main>section,
+.sidebar>section,
+footer {
+    padding: 1em;
+    box-sizing: border-box;
+    border: var(--border-level-1);
+    border-radius: var(--border-radius-level-1);
+}
+
+/*..........................
+
+		where the actual writing goes!
+
+..........................*/
+
+main>section>div,
+footer>div,
+.highlight {
+    background: var(--white-texture);
+    overflow: auto;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1em 2em;
+    border: var(--border-level-2);
+    border-style: inset;
+    border-radius: var(--border-radius-level-2);
+    box-shadow: 0.13em 0.11em 0.36em hsla(22, 32%, 85%, 0.9) inset;
+}
+
+/*..........................
+
+		text outlines
+
+..........................*/
+
+h1,
+nav a>* {
+    text-shadow: var(--text-shadow-white);
+}
+
+/*...........................................................
+
+		colours/backgrounds
+
+..........................*/
+
+nav a:nth-of-type(7n+1) {
+    background: var(--red-texture);
+    border-color: var(--red);
+}
+
+nav a:nth-of-type(7n+2) {
+    background: var(--orange-texture);
+}
+
+nav a:nth-of-type(7n+3),
+.sidebar>section:nth-of-type(1) {
+    background: var(--yellow-texture);
+    border-color: var(--yellow);
+}
+
+nav a:nth-of-type(7n+3)>*,
+.sidebar>section:nth-of-type(1)>* {
+    border-color: var(--yellow) !important;
+}
+
+nav a:nth-of-type(7n+4),
+.sidebar>section:nth-of-type(2) {
+    background: var(--green-texture);
+    border-color: var(--green);
+}
+
+nav a:nth-of-type(7n+4)>*,
+.sidebar>section:nth-of-type(2)>* {
+    border-color: var(--green) !important;
+}
+
+nav a:nth-of-type(7n+5),
+.sidebar>section:nth-of-type(3) {
+    background: var(--aqua-texture);
+    border-color: var(--aqua);
+}
+
+nav a:nth-of-type(7n+5)>*,
+.sidebar>section:nth-of-type(3)>* {
+    border-color: var(--aqua) !important;
+}
+
+nav a:nth-of-type(7n+6),
+.sidebar>section:nth-of-type(4) {
+    background: var(--blue-texture);
+    border-color: var(--blue);
+}
+
+nav a:nth-of-type(7n+6)>*,
+.sidebar>section:nth-of-type(4)>* {
+    border-color: var(--blue) !important;
+}
+
+nav a:nth-of-type(7n),
+.sidebar>section:nth-of-type(5) {
+    background: var(--purple-texture);
+    border-color: var(--purple);
+}
+
+nav a:nth-of-type(7n)>*,
+.sidebar>section:nth-of-type(5)>* {
+    border-color: var(--purple) !important;
+}
+
+h1,
+#main-2>div {
+    background: var(--black-texture);
+    color: var(--white2);
+    border-style: inset;
+    box-shadow: 0.1em 0.08em 0.25em hsla(0, 3%, 6%, 0.45) inset;
+}
+
+/*...........................................................
+
+		THE HEADER!!!!!!! HERE WE GO!!!!!!!!!!
+
+..........................*/
+
+header {
+    margin: 0 auto;
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 'heading' 'nav';
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 0;
+    z-index: 999;
+}
+
+/*..........................
+
+		nesting layer 1
+
+..........................*/
+
+header>div {
+    --bg-size: 2vw;
+    grid-area: heading;
+    display: block;
+    width: 100%;
+    z-index: 999;
+    border-color: var(--red);
+    border-style: outset;
+    background-color: var(--red);
+    background-image: url("/Background/02.gif");
+    background-size: calc(var(--bg-size) * 1.19);
+    padding: var(--bg-size);
+}
+
+/*..........................
+
+		nesting layer 2
+
+..........................*/
+
+header>div>div {
+    background: var(--white-texture);
+    padding: 1.4vw;
+    border: var(--border-level-2);
+    border-style: outset;
+    border-color: var(--red);
+    border-radius: var(--border-radius-level-2);
+    filter: var(--simple-text-shadow);
+}
+
+/*..........................
+
+		the actual heading!!
+
+..........................*/
+
+h1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0.25em 0;
+    border: var(--border-level-2);
+    border-radius: var(--border-radius-level-3);
+    color: var(--black2);
+}
+
+/*..........................
+
+	cute images on the sides
+
+..........................*/
+
+h1>*,
+h1::before,
+h1::after {
+    filter: drop-shadow(0.07em 0.05em 0.03em hsla(0, 3%, 6%, 0.4));
+}
+
+h1::before {
+    background-image: url("/Stickers/Cutie/Scenes/Spring01.png");
+}
+
+h1::after {
+    background-image: url("/Stickers/Cutie/Scenes/Untitled-1.png");
+}
+
+h1 img {
+    max-height: 1.5em;
+}
+
+/*...........................................................
+
+	adorable pull-out tab navigation!!!!!
+
+..........................*/
+
+nav {
+    --nav-length: calc(5.4em + var(--padding));
+    --nav-slide: calc(4.4em + var(--padding));
+    --padding: 0.75em;
+    grid-area: nav;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0.9em;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+}
+
+/*..........................
+
+	bcus the word undertale long asf lmao
+
+..........................*/
+
+nav a.undertale {
+    --nav-length: calc(6.4em + var(--padding));
+    --nav-slide: calc(5.4em + var(--padding));
+}
+
+/*..........................
+
+	   link itself
+
+..........................*/
+
+nav a {
+    text-decoration: none;
+    width: 1.66em;
+    padding: var(--padding) calc(var(--padding) * 1.25);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: var(--nav-length);
+    margin-top: calc(-1 * var(--nav-slide));
+    z-index: 99;
+    color: var(--black);
+    font-weight: bold;
+}
+
+/*..........................
+
+	adds a heart on the top
+
+..........................*/
+
+nav a::before {
+    content: "\2665";
+    text-shadow: var(--text-shadow-white);
+    font-size: 0.5em;
+    margin-bottom: 0.75em;
+    /* color: var(--white2); */
+}
+
+/*..........................
+
+	slides link out on hover
+
+..........................*/
+
+nav a:hover,
+nav a:focus {
+    transform: translateY(calc(var(--nav-slide) - 1px));
+    color: initial;
+}
+
+nav a,
+nav a:hover,
+nav a:focus {
+    transition: transform .3s ease;
+}
+
+/*...........................................................
+
+	MAIN TEXT AREA!!!!! LOTS OF COOL STUFF HAPPENING HERE
+
+..........................*/
+
+/*..........................
+
+	basic grid/layout
+
+..........................*/
+
+main {
+    --sidebar-width: 18vw;
+    grid-area: main;
+    display: grid;
+    gap: calc(var(--gap) * 1.1);
+    grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
+    grid-template-areas: 'main-1 main-1 side1' 'main-2 main-2 main-2' 'side2 main-3 main-3';
+}
+
+/*..........................
+
+	   big text boxes... colours n stuff
+
+..........................*/
+
+main>section {
+    --bg-size: 4vw;
+    padding: var(--bg-size) !important;
+    max-height: 166vh;
+    min-height: 100%;
+}
+
+main p {
+    max-width: 50ch;
+}
+
+main p>img {
+    min-height: 0.66em;
+    max-height: 1.3em;
+}
+
+#main-1 {
+    grid-area: main-1;
+}
+
+#bookmark {
+    display: flex;
+    align-items: center;
+    margin-top: -1em;
+}
+
+#bookmark p {
+    margin: 1em;
+}
+
+#bookmark .divider {
+    max-width: 100%;
+    max-height: 1.75em;
+    margin: 0.75em auto;
+}
+
+#bookmark .sticker {
+    height: 10em;
+    align-self: flex-end;
+}
+
+main>section:not(#main-2) {
+    background-image: url("/Background/03.png") !important;
+    background-size: calc(1.66 * var(--bg-size)) !important;
+}
+
+#main-2 {
+    --bg-size: 3vw;
+    grid-area: main-2;
+    background: var(--red-texture);
+}
+
+#main-2>div {
+    border-color: var(--red);
+}
+
+#main-3 {
+    grid-area: main-3;
+}
+
+#main-3 details {
+    margin: 1em auto;
+}
+
+#main-3 summary {
+    max-width: 50%;
+    margin: auto;
+}
+
+#main-3 details p {
+    max-width: 20ch;
+}
+
+/*..........................
+
+	MIDDLE SECTION!!! web stuff ahhg
+
+..........................*/
+
+#main-2 a {
+    color: var(--yellow-bg);
+    text-decoration: none;
+}
+
+#main-2 a:hover,
+#main-2 a:focus {
+    color: var(--orange-bg);
+}
+
+#main-2>div {
+    padding: var(--gap);
+    padding-top: calc(var(--gap) / 2.5);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+#main-2>div>* {
+    filter: drop-shadow(0.07em 0.05em 0.03em hsla(0, 3%, 6%, 0.4));
+}
+
+#main-2 h2 {
+    font-size: 1.9em;
+    display: block;
+    text-shadow: var(--text-shadow-white);
+    color: var(--black2);
+}
+
+#main-2 b {
+    display: block
+}
+
+.left,
+.right {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*..........................
+
+	   left side
+
+..........................*/
+
+.left {
+    margin-top: -0.5ch;
+}
+
+.left p {
+    margin: 0;
+    max-width: 25ch;
+}
+
+.left>p:last-of-type {
+    font-size: 0.85em;
+}
+
+.feature {
+    width: 18vw;
+    border: var(--border-level-2);
+    border-color: var(--red);
+    border-style: inset;
+}
+
+/*..........................
+
+	   middle section
+
+..........................*/
+
+.middle p {
+    max-width: 30ch;
+}
+
+#main-2 b img {
+    max-height: 1.5em;
+}
+
+bdo a {
+    color: var(--aqua-bg) !important;
+}
+
+bdo a:hover,
+bdo a:focus {
+    color: var(--orange-bg) !important;
+}
+
+/*..........................
+
+	   right side
+
+..........................*/
+
+.right {
+    margin-top: 1ch;
+}
+
+.right b {
+    margin-bottom: 1ch;
+}
+
+.text-hover-image {
+    width: 25ch;
+    display: inline-block;
+    font-size: 0.85em;
+    text-decoration: none !important;
+}
+
+a.text-hover-image {
+    color: var(--yellow-bg) !important;
+}
+
+a.text-hover-image:hover,
+a.text-hover-image:focus {
+    color: var(--aqua-bg) !important;
+}
+
+/*..........................
+
+	main content heading
+
+..........................*/
+
+main>section h2 {
+    font-size: 2.5em;
+    display: grid;
+    grid-auto-flow: column;
+    /* grid-auto-columns: minmax(0, 1fr); */
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--gap) / 2);
+    margin: 0.5em auto;
+}
+
+#main-1 h2 {
+    margin: 0 auto;
+    margin-top: -0.25em;
+}
+
+/*..........................
+
+	colours and animates the letters
+
+..........................*/
+
+.greet {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    letter-spacing: 0.05em;
+    text-shadow: var(--text-shadow-white);
+}
+
+@keyframes hop {
+    from {
+        transform: none;
+    }
+    to {
+        transform: translateY(-0.25em);
+    }
+}
+
+.greet>span {
+    display: inline-block;
+    /* animation: hop .6s ease infinite alternate-reverse; */
+}
+
+.greet>span:nth-of-type(10n+1) {
+    animation-delay: 0;
+}
+
+.greet>span:nth-of-type(10n+2) {
+    animation-delay: 0.1s;
+}
+
+.greet>span:nth-of-type(10n+3) {
+    animation-delay: 0.2s;
+}
+
+.greet>span:nth-of-type(10n+4) {
+    animation-delay: 0.3s;
+}
+
+.greet>span:nth-of-type(10n+5) {
+    animation-delay: 0.4s;
+}
+
+.greet>span:nth-of-type(10n+6) {
+    animation-delay: 0.5s;
+}
+
+.greet>span:nth-of-type(10n+7) {
+    animation-delay: 0.6s;
+}
+
+.greet>span:nth-of-type(10n+8) {
+    animation-delay: 0.7s;
+}
+
+.greet>span:nth-of-type(10n+9) {
+    animation-delay: 0.8s;
+}
+
+.greet>span:nth-of-type(10n) {
+    animation-delay: 0.9s;
+}
+
+/*..........................
+
+	cute images on heading
+
+..........................*/
+
+#main-1 h2::before,
+#main-1 h2::after {
+    --size: 2.5em;
+    height: var(--size);
+    width: calc(var(--size) / 2);
+}
+
+#main-1 h2::before {
+    margin-right: 0.25em;
+    --size: 3em;
+    width: calc(var(--size) / 1);
+    background-image: url("https://files.catbox.moe/qjklme.png");
+}
+
+#main-1 h2::after {
+  --size: 4.5em;
+    margin-left: 0.1em;
+    background-image: url("https://files.catbox.moe/lsc34q.png");
+}
+
+#main-2 h2::before,
+#main-2 h2::after {
+    display: none;
+}
+
+#main-3 h2::before,
+#main-3 h2::after {
+    --size: 2.5em;
+    background-image: url("/Stickers/Yummy/Orange/Q022.png");
+}
+
+/*..........................
+
+	mirrors the right image!!
+
+..........................*/
+
+main>section h2::after {
+    transform: scaleX(-1);
+}
+
+/*..........................
+
+	mp3 player :+DDDDD
+
+..........................*/
+
+audio {
+    max-width: 50%;
+    max-height: 1.5em;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+audio::-webkit-media-controls-play-button {
+    border-radius: 100%;
+    background-color: var(--white);
+    max-height: 80%;
+}
+
+/*...........................................................
+
+	   SIDEBARS!!! HELL YEAHHHH
+
+..........................*/
+
+.sidebar {
+    display: grid;
+    gap: calc(var(--gap) * 1.25);
+    align-items: start;
+    align-content: start;
+    justify-content: stretch;
+    font-weight: bold;
+}
+
+.sidebar:nth-of-type(1) {
+    grid-area: side1;
+}
+
+.sidebar:nth-of-type(2) {
+    grid-area: side2;
+}
+
+.sidebar a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.sidebar>a:last-child {
+    margin: auto;
+    height: 6em;
+    display: block;
+}
+
+.sidebar>a:last-child img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/*..........................
+
+	just making some flexboxes dont mind me
+
+..........................*/
+
+.sidebar h2,
+.sidebar>section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*..........................
+
+	sidebar floating heading
+
+..........................*/
+
+.sidebar h2 {
+    margin: 0;
+    align-items: flex-end;
+    display: inline-flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*..........................
+
+	the little boxes themselves!!!
+
+..........................*/
+
+.sidebar>section {
+    flex-flow: column wrap;
+    line-height: 1.4;
+    border-style: outset;
+}
+
+/*..........................
+
+	cute inset white text
+
+..........................*/
+
+.highlight {
+    box-sizing: border-box;
+    display: block;
+    padding: 0.33em;
+    padding-bottom: 0.45em;
+    width: 100%;
+    font-size: 0.85em;
+    font-weight: normal;
+    text-shadow: var(--literal-text-shadow);
+}
+
+.highlight:hover {
+    cursor: pointer;
+}
+
+a.highlight:hover,
+.highlight[title]:hover {
+    color: var(--red);
+}
+
+.sidebar:nth-of-type(even) .highlight {
+    margin-bottom: 0.5em;
+}
+
+.sidebar:nth-of-type(odd) .highlight {
+    margin-top: 0.5em;
+}
+
+/*..........................
+
+	this one has the white box on the bottom, so...
+
+..........................*/
+
+#lastupdate.highlight {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+/*...........................................................
+
+	AND LAST BUT NOT LEAST!!!!!!!! THE FOOTER!!!!!!!!!!
+
+..........................*/
+
+footer>div {
+    display: flex;
+    justify-content: space-evenly;
+}

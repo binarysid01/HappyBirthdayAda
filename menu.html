@@ -1,0 +1,124 @@
+<html lang="en">
+<link type="text/css" id="dark-mode" rel="stylesheet" href="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ada's Cafe Menu
+    </title>
+    <link rel="stylesheet" href="stylesss.css">
+    <script src="scripttt.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#mobile-nav').load('https://aegi.neocities.org/includes/mobile-nav.html');
+            $('#main-nav').load('https://aegi.neocities.org/includes/main-nav.html');
+        });
+    </script>
+
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+        @font-face {
+            font-family: 'Pixel Head';
+            src: url('https://aegi.neocities.org/includes/fonts/04b_25.ttf.woff') format('woff'), url('https://aegi.neocities.org/includes/fonts/04b_25.ttf.svg#04b_25') format('svg'), url('https://aegi.neocities.org/includes/fonts/04b_25.ttf.eot'), url('https://aegi.neocities.org/includes/fonts/04b_25.ttf.eot?#iefix') truncated 10321bytes...
+    </style>
+    <style>
+            .lds-dual-ring {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+        
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            border-color: #fff transparent #fff transparent;
+            animation: lds-dual-ring 1.2s linear truncated 578bytes...
+    </style>
+</head>
+  <a onClick="togglePlay()">&nbsp;&nbsp;&nbsp;&nbsp;<span id="playPause">Play</span></a>
+  <audio id="myAudio" src="cafe.mp3" preload="auto"></audio>
+
+  <script type="text/javascript">
+      var myAudio = document.getElementById("myAudio");
+      var playPauseButton = document.getElementById("playPause");
+
+      function togglePlay() {
+          if (myAudio.paused) {
+              myAudio.play();
+              playPauseButton.innerText = "Pause";
+          } else {
+              myAudio.pause();
+              playPauseButton.innerText = "Play";
+          }
+      };
+  </script>
+<body class="light" style="cursor: auto;">
+    <div id="mobile-nav"><input type="checkbox" id="overlay-input">
+        
+           
+        </div>
+    </div>
+    <div id="container">
+        <header>
+        </header>
+        <div id="main">
+            <div id="sidebar">
+                <marquee>
+                    <div class="aegi_logo"></div>
+                </marquee>
+                <div id="main-nav">
+                    <nav id="main-nav">
+                      
+                    </nav>
+                </div>
+            </div>
+            <div id="content">
+                <div class="menu-holder">
+                    <h2>Menu</h2>
+                    <ul class="sub-pages horizontal">
+                        <li><a onclick="openCity('Mains')">Mains</a></li>
+                        <li><a onclick="openCity('Drinks')">Drinks</a></li>
+                        <li><a onclick="openCity('Sweets')">Sweets</a></li>
+                    </ul>
+                    <div id="Mains" class="tab" style="display:none">
+                        <h2>Main courses</h2>
+                        <ul class="menu-items">
+                            <li><a href="">Pancakes</a></li>
+                            <li><a href="">Potato Puree</a></li>
+                            <li><a href="">Chicken sandwich</a></li>
+                        </ul>
+                    </div>
+                    <div id="Drinks" class="tab" style="display:none">
+                        <h2>Drinks</h2>
+                        <ul class="menu-items">
+                            <li><a href="">Cappuccino</a></li>
+                            <li><a href="">Hot Chocolate</a></li>
+                            <li><a href="">Green apple juice</a></li>
+                        </ul>
+                    </div>
+                    <div id="Sweets" class="tab" style="display: block;">
+                        <h2>Sweets</h2>
+                        <ul class="menu-items">
+                            <li><a href="">Chocolate cake</a></li>
+                            <li><a href="">Lemon Cheesecake</a></li>
+                            <li><a href="">Chec</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a href="home.html">love u Ada</a>
+        </footer>
+    </div>
+
+</body>
+
+</html>

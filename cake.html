@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://files.catbox.moe/066ezy.png">
+
+  <meta charset="UTF-8">
+  <title>Happy Birthday Ada!</title>
+  <link rel="stylesheet" href="cake.css">
+
+</head>
+  <a onClick="togglePlay()">
+    <span id="playPause">Play</span>
+  </a>
+  <audio id="myAudio1" src="cakee.mp3" preload="auto" onended="playNext()"></audio>
+  <audio id="myAudio2" src="cakeee.mp3" preload="auto"></audio>
+
+  <script type="text/javascript">
+    var myAudio1 = document.getElementById("myAudio1");
+    var myAudio2 = document.getElementById("myAudio2");
+    var playPauseButton = document.getElementById("playPause");
+
+    function togglePlay() {
+      if (myAudio1.paused) {
+        myAudio1.play();
+        playPauseButton.innerText = "Pause";
+      } else {
+        myAudio1.pause();
+        playPauseButton.innerText = "Play";
+      }
+    };
+
+    function playNext() {
+      myAudio2.play();
+    }
+  </script>
+
+<body>
+<!-- partial:index.partial.html -->
+<div class='birthday'>
+  <div class='birthday_inner'>
+    <div class='birthday_inner__modal'>
+      <div class='modal_image'>
+        <img src='/'>
+      </div>
+      <div class='modal_content'>
+        <h1>Title</h1>
+        <p>Content</p>
+        <button>LETS GO!</button>
+      </div>
+    </div>
+    <div class='birthday_inner__stage stage1'>
+      <div class='intro_cake'>
+        <img class='intro' src='https://i.ibb.co/ZG0nq6w/12.png'>
+      </div>
+      <button class='start'>Let’s make your cake together</button>
+    </div>
+    <div class='birthday_inner__stage stage2'>
+      <h1>Mixing time</h1>
+      <h2>Ada listennn LISTEN you listening? okay let's start by mixing all of our ingredients together in a big mixing bowl. make the mixture nice and smooth with the help of Gus</h2>
+      <div class='mix'>
+        <div class='mix_bowl'>
+          <img src='https://i.ibb.co/McQ4rD4/help.png'>
+        </div>
+        <div class='mix_spoon'>
+          <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/spoon.png'>
+        </div>
+      </div>
+      <button class='mixer'>Mix mix mix</button>
+    </div>
+    <div class='birthday_inner__stage stage3'>
+      <h1>Let’s bake our base</h1>
+      <h2>Alright, let’s get this mixture in the oven. Go ahead and drag the cake mix into the digital oven. Then put your feet up while it bakes.</h2>
+      <div class='oven'>
+        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/oven.png'>
+      </div>
+      <div class='tin'>
+        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tin.png'>
+      </div>
+    </div>
+    <div class='birthday_inner__stage stage4'>
+      <h1>Let's build our cakeee</h1>
+      <h2>Now what do you wanna put. Icing first than sponge</h2>
+      <div class="svg-container">
+          <img src="bdd.png" alt="ada bd" class="svg-img">
+      </div>
+
+      <div class='options'>
+        <div class='sponges inactive'>
+          <h3>Sponges</h3>
+          <h5>
+            <span>0</span>
+            / 5
+          </h5>
+          <div class='item'>
+            <div class='item_inner vanilla'></div>
+            <h4>Vanilla</h4>
+          </div>
+          <div class='item'>
+            <div class='item_inner strawberry'></div>
+            <h4>Pink</h4>
+          </div>
+          <div class='item'>
+            <div class='item_inner fruit'></div>
+            <h4>Fruit</h4>
+          </div>
+        </div>
+        <div class='fillings'>
+          <h3>Fillings/icing</h3>
+          <h5>
+            <span>0</span>
+            / 6
+          </h5>
+          <div class='item'>
+            <div class='item_inner jam'></div>
+            <h4>Jam</h4>
+          </div>
+          <div class='item'>
+            <div class='item_inner cream'></div>
+            <h4>Cream</h4>
+          </div>
+          <div class='item'>
+            <div class='item_inner choc'></div>
+            <h4>Choc</h4>
+          </div>
+          <div class='item'>
+            <div class='item_inner lemon'></div>
+            <h4>Lemon</h4>
+          </div>
+        </div>
+      </div>
+      <div class='cakemake'>
+        <div class='base'></div>
+      </div>
+      <div class='startagain'>Start again</div>
+      <button class='add'>Put the candle hun</button>
+      <button class='sa'>Another cake?</button>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+  <script  src="cake.js"></script>
+
+  
+
+
+</body>
+</html>

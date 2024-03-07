@@ -1,0 +1,285 @@
+/*...........................................................
+
+		HTML COMMENT BOX!!!!!!!!!!!!!
+
+..........................*/
+
+#HCB_comment_box a[href*="rss"] {
+    display: none;
+}
+
+#HCB_comment_box {
+    width: 80%;
+    height: auto !important;
+    margin: auto;
+    text-align: left !important;
+}
+
+#comments_list::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+#comments_list::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    border: var(--border-level-3);
+    background: var(--green-texture);
+    border-color: var(--green);
+}
+
+#HCB_comment_box #comments_list {
+    flex: initial !important;
+}
+
+.comment {
+    margin-right: 0.75em;
+}
+
+.comment blockquote {
+    max-width: 40ch;
+}
+
+.comment p {
+    line-height: 1.25 !important;
+}
+
+#HCB_comment_box,
+.btn,
+input#hcb_submit,
+.hcb-comment-tb button {
+    font-family: var(--body-font) !important;
+}
+
+/*..........................
+
+	date
+
+..........................*/
+
+span.date {
+    font-size: 0.6em !important;
+    margin-left: 0.5em;
+}
+
+/*..........................
+
+	author name + decorations
+
+..........................*/
+
+span.author,
+b.author-name {
+    font-size: 1.05em !important;
+    font-family: var(--heading-font) !important;
+}
+
+span.author,
+b.author-name,
+.btn,
+input#hcb_submit {
+    color: var(--black2) !important;
+    /* text-shadow: var(--text-shadow-white)!important; */
+}
+
+/*..........................
+
+	images next to author names
+
+..........................*/
+
+span.author::before {
+    content: "";
+    display: inline-block;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 0.9em;
+    width: 0.9em;
+    margin-right: 0.33em;
+}
+
+.comment:nth-child(5n+1) span.author::before {
+    background-image: url("/Stickers/Yummy/Orange/E10.png");
+}
+
+.comment:nth-child(5n+2) span.author::before {
+    background-image: url("/Stickers/Yummy/Pink/J05.png");
+}
+
+.comment:nth-child(5n+3) span.author::before {
+    background-image: url("/Stickers/Yummy/Orange/L04.png");
+}
+
+.comment:nth-child(5n+4) span.author::before {
+    background-image: url("/Stickers/Yummy/Pink/C05.png");
+}
+
+.comment:nth-child(5n) span.author::before {
+    background-image: url("/Stickers/Yummy/Orange/O05.png");
+}
+
+/*.................. styles odd comments */
+
+/* first reply */
+
+.comment:nth-child(odd) .comment:nth-of-type(3n+1) span.author::before {
+    background-image: url("/Stickers/Yummy/Pink/O07.png");
+}
+
+/* second reply */
+
+.comment:nth-child(odd) .comment:nth-of-type(3n+2) span.author::before {
+    background-image: url("/Stickers/Yummy/Blue/J06.png");
+}
+
+/* third reply */
+
+.comment:nth-child(odd) .comment:nth-of-type(3n) span.author::before {
+    background-image: url("/Stickers/Yummy/Blue/G10.png");
+}
+
+/*..................... styles even comments */
+
+/* first reply */
+
+.comment:nth-child(even) .comment:nth-of-type(3n+1) span.author::before {
+    background-image: url("/Stickers/Yummy/Blue/H06.png");
+}
+
+/* second reply */
+
+.comment:nth-child(even) .comment:nth-of-type(3n+2) span.author::before {
+    background-image: url("/Stickers/Yummy/Pink/O08.png");
+}
+
+/* third reply */
+
+.comment:nth-child(even) .comment:nth-of-type(3n) span.author::before {
+    background-image: url("/Stickers/Yummy/Blue/H07.png");
+}
+
+/*..........................
+
+	the actual comment itself
+
+..........................*/
+
+p.hcb-comment-body {
+    font-size: 1em !important;
+}
+
+#HCB_comment_box .comment {
+    margin-bottom: 1em !important;
+}
+
+#HCB_comment_box>p:last-of-type {
+    margin: 1em auto;
+    font-size: 1em !important;
+}
+
+/*..........................
+
+		like/reply/flag
+
+..........................*/
+
+.hcb-comment-tb {
+    text-align: right !important;
+    max-width: initial !important;
+}
+
+.hcb-comment-tb button {
+    /* font-size: 1em!important;	 */
+    color: var(--red) !important;
+}
+
+.comment:nth-child(odd) .hcb-comment-tb button {
+    color: var(--blue) !important;
+}
+
+.comment:nth-child(odd) .comment:nth-child(odd) .hcb-comment-tb button {
+    color: var(--purple) !important;
+}
+
+.hcb-comment-tb button:first-of-type::before {
+    content: " · ";
+}
+
+.hcb-comment-tb button:last-of-type::after {
+    content: " · ";
+}
+
+.hcb-comment-tb button:hover {
+    color: var(--red) !important;
+}
+
+/*..........................
+
+		submit button
+
+..........................*/
+
+.btn,
+input#hcb_submit {
+    background: var(--yellow-texture) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0.5em auto !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: bold !important;
+    border: var(--border-level-2) !important;
+    border-radius: var(--border-radius-level-1) !important;
+    border-color: var(--yellow-bg) !important;
+    border-style: outset !important;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn {
+    font-size: 0.9em !important;
+}
+
+input#hcb_submit {
+    font-size: 0.8em !important;
+    margin: 1em 0 1.5em 0 !important;
+    filter: var(--simple-text-shadow);
+}
+
+/*..........................
+
+	the forms where ppl type
+
+..........................*/
+
+#HCB_comment_box #hcb_form_content,
+#HCB_comment_box #hcb_form_email,
+#HCB_comment_box #hcb_form_name,
+#HCB_comment_box #hcb_form_website {
+    font-family: var(--body-font) !important;
+    padding: 0.25em !important;
+    font-size: 1em !important;
+    filter: var(--simple-text-shadow);
+}
+
+#HCB_comment_box #hcb_form_email::placeholder,
+#HCB_comment_box #hcb_form_name::placeholder,
+#HCB_comment_box #hcb_form_website::placeholder {
+    filter: var(--simple-text-shadow);
+}
+
+/*..........................
+
+	hides built in title
+
+..........................*/
+
+#HCB_comment_box h3 {
+    display: none;
+}
+
+#hcb_msg {
+    display: none;
+}
