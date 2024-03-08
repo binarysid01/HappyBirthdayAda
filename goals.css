@@ -6,7 +6,7 @@
 
 body {
     background-color: var(--blue-bg);
-    background-image: url("/Background/gg02.png"), url("/Background/01.png");
+    background-image: url("Background/gg02.png"), url("Background/01.png");
     background-attachment: fixed;
     background-size: 10vw auto, 10vw auto;
     background-repeat: round, repeat;
@@ -244,7 +244,7 @@ header>div {
     border-color: var(--red);
     border-style: outset;
     background-color: var(--red);
-    background-image: url("/Background/02.gif");
+    background-image: url("Background/02.gif");
     background-size: calc(var(--bg-size) * 1.19);
     padding: var(--bg-size);
 }
@@ -296,11 +296,11 @@ h1::after {
 }
 
 h1::before {
-    background-image: url("/Stickers/Cutie/Scenes/Spring01.png");
+    background-image: url("Stickers/Cutie/Scenes/Spring01.png");
 }
 
 h1::after {
-    background-image: url("/Stickers/Cutie/Scenes/Untitled-1.png");
+    background-image: url("Stickers/Cutie/Scenes/Untitled-1.png");
 }
 
 h1 img {
@@ -461,7 +461,7 @@ main p>img {
 }
 
 main>section:not(#main-2) {
-    background-image: url("/Background/03.png") !important;
+    background-image: url("Background/03.png") !important;
     background-size: calc(1.66 * var(--bg-size)) !important;
 }
 
@@ -744,7 +744,7 @@ main>section h2 {
 #main-3 h2::before,
 #main-3 h2::after {
     --size: 2.5em;
-    background-image: url("/Stickers/Yummy/Orange/Q022.png");
+    background-image: url("Stickers/Yummy/Orange/Q022.png");
 }
 
 /*..........................
