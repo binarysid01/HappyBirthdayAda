@@ -50,7 +50,7 @@
     /* scrollbar */
     --scrollbar-track: var(--white-texture);
     --scrollbar-thumb: var(--blue-texture);
-    --scrollbar-button: url("/Assets/Pixels/Nature/01.gif");
+    --scrollbar-button: url("Assets/Pixels/Nature/01.gif");
     /* fonts */
     --body-font: "Yomogi", sans-serif;
     --heading-font: "LOVING IS EASY", "Yomogi", sans-serif;
@@ -79,7 +79,7 @@
 
 body {
     background-color: var(--blue-bg);
-    background-image: url("/Background/01.png");
+    background-image: url("Background/01.png");
     background-attachment: fixed;
     background-size: 10vw auto;
     color: var(--black);
@@ -170,7 +170,7 @@ figcaption {
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
     background-position: var(--back-position) var(--back-position), calc(100% - var(--back-position)) var(--back-position), var(--back-position) calc(100% - var(--back-position)), calc(100% - var(--back-position)) calc(100% - var(--back-position)), 0 0;
     background-size: 2em;
-    background-image: url("EASYPASTE!"), url("EASYPASTE!"), url("EASYPASTE!"), url("EASYPASTE!"), url("/Background/Texture/white.png");
+    background-image: url("EASYPASTE!"), url("EASYPASTE!"), url("EASYPASTE!"), url("EASYPASTE!"), url("Background/Texture/white.png");
 }
 
 /*..........................
@@ -547,17 +547,17 @@ body::-webkit-scrollbar-thumb {
 ..........................*/
 
 :root {
-    --red-texture: var(--red) url("/Background/Texture/red.png");
-    --orange-texture: var(--orange) url("/Background/Texture/orange.png");
-    --yellow-texture: var(--yellow) url("/Background/Texture/yellow.png");
-    --green-texture: var(--green) url("/Background/Texture/green.png");
-    --aqua-texture: var(--aqua) url("/Background/Texture/aqua.png");
-    --blue-texture: var(--blue) url("/Background/Texture/blue.png");
-    --purple-texture: var(--purple) url("/Background/Texture/purple.png");
-    --pink-texture: var(--pink) url("/Background/Texture/pink.png");
-    --white-texture: var(--white) url("/Background/Texture/white.png");
-    --black-texture: var(--black) url("/Background/Texture/black.gif");
-    --brown-texture: var(--brown) url("/Background/Texture/brown.png");
+    --red-texture: var(--red) url("Background/Texture/red.png");
+    --orange-texture: var(--orange) url("Background/Texture/orange.png");
+    --yellow-texture: var(--yellow) url("Background/Texture/yellow.png");
+    --green-texture: var(--green) url("Background/Texture/green.png");
+    --aqua-texture: var(--aqua) url("Background/Texture/aqua.png");
+    --blue-texture: var(--blue) url("Background/Texture/blue.png");
+    --purple-texture: var(--purple) url("Background/Texture/purple.png");
+    --pink-texture: var(--pink) url("Background/Texture/pink.png");
+    --white-texture: var(--white) url("Background/Texture/white.png");
+    --black-texture: var(--black) url("Background/Texture/black.gif");
+    --brown-texture: var(--brown) url("Background/Texture/brown.png");
 }
 
 /*..........................
